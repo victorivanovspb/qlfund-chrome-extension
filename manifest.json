@@ -1,0 +1,31 @@
+{
+  "name"        : "QLFund: все события",
+  "description" : "QLFund",
+  "version"     : "0.1",
+  "manifest_version" : 2,
+  "icons" : {
+    "16"  : "images/b-48.png",
+    "48"  : "images/b-48.png",
+    "128" : "images/b-128.png"
+  },
+  "content_scripts" : [{
+    "matches" : [
+        "http://*/*",
+        "https://*/*",
+        "file://*/*"
+      ],
+    "css"     : ["basic.css"],
+    "js"      : ["jquery-1.7.min.js", "contentscript.js"]
+  }],
+  "background": {
+    "page": "background.html"
+  },
+  "options_page": "options.html",
+  "homepage_url": "http://qlfund.ru.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ]
+}
